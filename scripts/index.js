@@ -39,7 +39,7 @@ function createCard(cardEl){
         initialCards.map((item, index) => {
             if (item.name === cardEl.name) {
                 initialCards.splice(index, 1);
-                drawCards(initialCards);
+                showCards(initialCards);
             }
         });
     });
