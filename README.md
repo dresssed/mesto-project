@@ -7,5 +7,8 @@
 - **JS**
 - **Webpack**
 
+## GitHub Pages
+
+[Ссылка на проект](https://dresssed.github.io/mesto-project/)
 
 
