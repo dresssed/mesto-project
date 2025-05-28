@@ -172,6 +172,7 @@ function handleProfileFormSubmit(evt) {
   evt.preventDefault();
 
   profileFormBtn.textContent = "Сохраняем...";
+  profileFormBtn.classList.add(validationSettings.inactiveButtonClass);
   const body = {
     name: nameInput.value,
     about: aboutInput.value,
