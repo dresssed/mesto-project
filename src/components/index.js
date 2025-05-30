@@ -141,6 +141,8 @@ profileAvatarOverlay.addEventListener("click", (event) => {
 function handleAvatarFormSubmit(evt) {
   evt.preventDefault();
   avatarFormBtn.textContent = "Сохраняем...";
+  avatarFormBtn.classList.add(validationSettings.inactiveButtonClass);
+  avatarFormBtn.disabled = true;
   const body = {
     avatar: avatarInputTypeUrl.value,
   };
@@ -155,6 +157,8 @@ function handleAvatarFormSubmit(evt) {
     })
     .finally(() => {
       avatarFormBtn.textContent = "Сохранить";
+      avatarFormBtn.classList.remove(validationSettings.inactiveButtonClass);
+      avatarFormBtn.disabled = false;
     });
 }
 
@@ -173,6 +177,7 @@ function handleProfileFormSubmit(evt) {
 
   profileFormBtn.textContent = "Сохраняем...";
   profileFormBtn.classList.add(validationSettings.inactiveButtonClass);
+  profileFormBtn.disabled = true;
   const body = {
     name: nameInput.value,
     about: aboutInput.value,
@@ -189,6 +194,8 @@ function handleProfileFormSubmit(evt) {
     })
     .finally(() => {
       profileFormBtn.textContent = "Сохранить";
+      profileFormBtn.classList.remove(validationSettings.inactiveButtonClass);
+      profileFormBtn.disabled = false;
     });
 }
 
@@ -207,6 +214,7 @@ function handleCardFormSubmit(evt) {
 
   cardFormBtn.textContent = "Создаем...";
   cardFormBtn.classList.add(validationSettings.inactiveButtonClass);
+  cardFormBtn.disabled = true;
   const body = {
     name: cardNameInput.value,
     link: cardInputTypeUrl.value,
@@ -228,6 +236,7 @@ function handleCardFormSubmit(evt) {
     .finally(() => {
       cardFormBtn.textContent = "Создать";
       cardFormBtn.classList.remove(validationSettings.inactiveButtonClass);
+      cardFormBtn.disabled = false;
     });
 }
 
